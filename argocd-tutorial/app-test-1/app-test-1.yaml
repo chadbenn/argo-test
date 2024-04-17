@@ -48,6 +48,7 @@ metadata:
   name: app-test-1-ingress
   namespace: app-test-1
 spec:
+  ingressClassName: nginx
   rules:
   - host: 'app-test-1.lancope.ciscolabs.com'
     http:
