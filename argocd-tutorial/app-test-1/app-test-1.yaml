@@ -33,7 +33,7 @@ metadata:
   labels:
     app: app-test-1
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - name: http
     ports: 8888
@@ -46,7 +46,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    metallb.uniferse.tf/address-pool: pool-2
+    metallb.uniferse.tf/loadBalancerIPs: 10.90.96.129
   name: app-test-1-ingress
   namespace: app-test-1
 spec:
