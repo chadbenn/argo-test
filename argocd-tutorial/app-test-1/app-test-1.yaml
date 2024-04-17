@@ -45,6 +45,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    metallb.uniferse.tf/address-pool: pool-2
   name: app-test-1-ingress
   namespace: app-test-1
 spec:
