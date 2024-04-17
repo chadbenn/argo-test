@@ -38,7 +38,7 @@ spec:
   type: ClusterIP
   ports:
   - name: http
-    ports: 8888
+    port: 8888
     targetPort: 8888
     protocol: TCP
   selector:
