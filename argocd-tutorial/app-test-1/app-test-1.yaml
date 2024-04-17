@@ -28,6 +28,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    metallb.uniferse.tf/loadBalancerIPs: 10.90.96.129
   name: app-test-1-svc
   namespace: app-test-1
   labels:
@@ -45,8 +47,6 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  annotations:
-    metallb.uniferse.tf/loadBalancerIPs: 10.90.96.129
   name: app-test-1-ingress
   namespace: app-test-1
 spec:
